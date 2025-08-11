@@ -15,6 +15,8 @@
 # python -m pip install beautifulsoup4
 # => parse html
 
+import json
+import csv
 import requests
 from bs4 import BeautifulSoup
 
@@ -53,13 +55,13 @@ def scrape_books(url):
 books = scrape_books(url)
 
 with open("books.json", "w", encoding="utf-8") as f:
-    import json
+    
 
     json.dump(books, f, indent=4, ensure_ascii=False)
 
 
 with open("books.csv", "w", encoding="utf-8", newline="") as f:
-    import csv
+    
     
     writer = csv.DictWriter(f, fieldnames=["title", "currency", "price"])
     writer.writeheader()
