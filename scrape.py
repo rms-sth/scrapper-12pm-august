@@ -23,9 +23,10 @@
 # python -m pip install beautifulsoup4
 # => parse html
 
-import json
 import csv
+import json
 import requests
+
 from bs4 import BeautifulSoup
 
 # URL of the website to scrape
